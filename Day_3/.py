@@ -16,7 +16,7 @@ def day31(input):
                     result+= ord(sym)-ord('A') + 1 + 26
                     break
     print(result)
-#day31(liste)
+day31(liste)
 #https://stackoverflow.com/questions/3246262/python-how-do-i-assign-values-to-letters
 
 
