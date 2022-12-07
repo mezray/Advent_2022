@@ -1,9 +1,9 @@
-with open('test.txt', 'r') as f:
+with open('liste.txt', 'r') as f:
     liste = [line.rstrip().split('\n') for line in f if line.strip()]
 
 
-liste1=[['Z','N'],['M','C','D'],['P']]
-liste2=[['H','C','R'], 
+liste2=[['Z','N'],['M','C','D'],['P']]
+liste1=[['H','C','R'], 
         ['B','J','H','L','S','F'],
         ['R','M','D','H','J','T','Q'], 
         ['S','G','R','H','Z','B','J'],
@@ -30,7 +30,7 @@ def test(liste):
         for j in range(len(toAdd)):
             res=toAdd[j]
             print('avant',liste1[int(listeDepart)-1])
-            liste1[int(listeDepart)-1].remove(res)
+            liste1[int(listeDepart)-1].pop()
             print('après',liste1[int(listeDepart)-1])
 
         toAdd.reverse()
