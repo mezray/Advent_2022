@@ -20,31 +20,53 @@ def test(liste):
         listing,b =liste[i][0].split(' from ')
         listingNum = listing[5:]
         listeDepart, listeArrive = b.split(' to ')
-        print(listingNum, listeDepart, listeArrive)
-        
         
         toAdd = liste1[int(listeDepart)-1][-int(listingNum):]
-        print(toAdd)
-
-
+        
         for j in range(len(toAdd)):
-            res=toAdd[j]
-            print('avant',liste1[int(listeDepart)-1])
-            liste1[int(listeDepart)-1].pop()
-            print('après',liste1[int(listeDepart)-1])
+            liste1[int(listeDepart)-1].pop()  
 
         toAdd.reverse()
 
         for p in range(len(toAdd)):
             res=toAdd[p]
-            print('avant',liste1[int(listeArrive)-1])
-            liste1[int(listeArrive)-1].append(res)
-            print('après',liste1[int(listeArrive)-1])
             
+            liste1[int(listeArrive)-1].append(res)
+                        
     for u in range(len(liste1)):
        print(liste1[u][-1:],"\n")
         
-test(liste)
+#test(liste)
 
     
 
+def test2(liste):
+    for i in range(len(liste)):
+        print(liste1)
+        toAdd=[]
+        listing,b =liste[i][0].split(' from ')
+        listingNum = listing[5:]
+        listeDepart, listeArrive = b.split(' to ')
+        
+        
+        
+        toAdd = liste1[int(listeDepart)-1][-int(listingNum):]
+        
+
+
+        for j in range(len(toAdd)):          
+            liste1[int(listeDepart)-1].pop()
+            
+
+        
+
+        for p in range(len(toAdd)):
+            res=toAdd[p]
+            
+            liste1[int(listeArrive)-1].append(res)
+            
+        
+    for u in range(len(liste1)):
+       print(liste1[u][-1:],"\n")
+        
+test2(liste)
